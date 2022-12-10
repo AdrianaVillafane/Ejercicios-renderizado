@@ -277,23 +277,27 @@ console.log("El disco " + nombreDisco + " de la banda " + nombreBanda + " se lan
 Tenemos la variable user, que es un objeto con datos de una persona en linkedin
 En el objeto hay una propiedad skills, que es un array con las distintas habilidades de la persona
 Necesitamos actualizar el perfil y agregar "Javascript" al array de de skills*/
-var user = {
+var usuario = {
   id: 123456789,
   name: "Ada Lovelace",
   url: "https://www.linkedin.com/in/ada-lovelace",
   skills: ["HTML", "CSS", "SASS"],
 };
 
-user.skills.push("Javascript");
+usuario.skills.push("Javascript");
 // codea aca la solucion
 
 // despues de la solucion
-console.log(user);
+console.log(usuario);
 // deberia mostrar
 // { id: 123456789,
 //   name: 'Ada Lovelace',
 //   url: 'https://www.linkedin.com/in/ada-lovelace',
 //   skills: [ 'HTML', 'CSS', 'SASS', 'Javascript' ] }
+
+
+
+
 /*09 - playlist
 Creá un objeto donde vamos a guardar información sobre una playlist de spotify
 El objeto va a tener las propiedades nombre (un string), privada (un booleano) y canciones (un array de strings).
@@ -304,8 +308,23 @@ Canciones:
 Smells Like Teen Spirit
 In Bloom
 Come As You Are
-Privada tiene que mostrar Si en el caso que la propiedad privada sea true, o No si la prop
-10 - ganadora
+Privada tiene que mostrar Si en el caso que la propiedad privada sea true, o No si la prop*/
+
+let listaNirvana = {
+  nombre: "Nirvana",
+  privada: true,
+  canciones: ["Smells Like Teen Spirit", "In Bloom", "Come As You Are"],
+}
+Boolean(privada = true); {
+  console.log("si");
+}
+
+console.log(listaNirvana.nombre);
+
+
+
+
+/*10 - ganadora
 Tenemos un array de objetos, con las ganadoras de algunas temporadas de Rupaul.
 Cada objeto tiene las propiedades nombre, temporada y foto.
 Iterá/Recorré el array utilizando for y mostrá el nombre y la temporada que ganó. Por ejemplo: Bianca Del Rio ganó la temporada 6
