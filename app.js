@@ -276,7 +276,7 @@ console.log("El disco " + nombreDisco + " de la banda " + nombreBanda + " se lan
 /*08 - skills
 Tenemos la variable user, que es un objeto con datos de una persona en linkedin
 En el objeto hay una propiedad skills, que es un array con las distintas habilidades de la persona
-Necesitamos actualizar el perfil y agregar "Javascript" al array de de skills
+Necesitamos actualizar el perfil y agregar "Javascript" al array de de skills*/
 var user = {
   id: 123456789,
   name: "Ada Lovelace",
@@ -284,6 +284,7 @@ var user = {
   skills: ["HTML", "CSS", "SASS"],
 };
 
+user.skills.push("Javascript");
 // codea aca la solucion
 
 // despues de la solucion
@@ -293,7 +294,7 @@ console.log(user);
 //   name: 'Ada Lovelace',
 //   url: 'https://www.linkedin.com/in/ada-lovelace',
 //   skills: [ 'HTML', 'CSS', 'SASS', 'Javascript' ] }
-09 - playlist
+/*09 - playlist
 Creá un objeto donde vamos a guardar información sobre una playlist de spotify
 El objeto va a tener las propiedades nombre (un string), privada (un booleano) y canciones (un array de strings).
 En líneas separadas (un console.log por cada una), mostrá la información de la lista para que sea vea de la siguiente forma:
