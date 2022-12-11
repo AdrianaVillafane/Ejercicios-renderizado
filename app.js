@@ -327,7 +327,7 @@ console.log(listaNirvana.nombre);
 /*10 - ganadora
 Tenemos un array de objetos, con las ganadoras de algunas temporadas de Rupaul.
 Cada objeto tiene las propiedades nombre, temporada y foto.
-Iterá/Recorré el array utilizando for y mostrá el nombre y la temporada que ganó. Por ejemplo: Bianca Del Rio ganó la temporada 6
+Iterá/Recorré el array utilizando for y mostrá el nombre y la temporada que ganó. Por ejemplo: Bianca Del Rio ganó la temporada 6*/
 var ganadoras = [
   {
     nombre: "Bebe Zahara Benet",
@@ -361,6 +361,16 @@ var ganadoras = [
   },
 ];
 
+const winners = () => {
+  for (const ganadora of ganadoras) {
+    console.log(`${ganadora.nombre} ganó la temporada ${ganadora.temporada}`);
+  }
+};
+
+winners();
+
+
+
 ///// RESULTADO
 // Bebe Zahara Benet ganó la temporada 1
 // Tyra Sanchez ganó la temporada 2
@@ -368,6 +378,12 @@ var ganadoras = [
 // Sharon Needles ganó la temporada 4
 // Jinkx Monsoon ganó la temporada 5
 // Bianca Del Rio ganó la temporada 6
+/*
+
+
+
+
+
 11 - canciones
 Tenemos un array de objetos, que representa un listado de bandas
 Cada objeto representa una banda, y tiene las propidades id, nombre, fundacion, activa
