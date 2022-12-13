@@ -238,7 +238,7 @@ var datos = {
 // codea aca la solucion
 const actualizacion = () => {
   if (datos.programa === true) {
-    datos.lenguajeFav =["Javascript", "Node","C++"] ;
+    datos.lenguajeFav = ["Javascript", "Node", "C++"];
     return datos;
   }
 };
@@ -369,8 +369,6 @@ const winners = () => {
 
 winners();
 
-
-
 ///// RESULTADO
 // Bebe Zahara Benet ganó la temporada 1
 // Tyra Sanchez ganó la temporada 2
@@ -389,26 +387,43 @@ Tenemos un array de objetos, que representa un listado de bandas
 Cada objeto representa una banda, y tiene las propidades id, nombre, fundacion, activa
 Mostrar en consola cada banda del array, con la siguiente lógica:
 Si la banda está activa mostrar el mensaje: "[NOMBRE DE LA BANDA] está activa desde el año [AÑO DE FUNDACIÓN]"
-Si la banda NO está activa mostrar el mensaje: "[NOMBRE DE LA BANDA] no está activa"
+Si la banda NO está activa mostrar el mensaje: "[NOMBRE DE LA BANDA] no está activa"*/
 var bandas = [
   { id: 1, nombre: "Nirvana", fundacion: 1987, activa: false },
   { id: 2, nombre: "Foo Fighters", fundacion: 1994, activa: true },
   { id: 3, nombre: "Led Zeppelin", fundacion: 1967, activa: false },
-  { id: 3, nombre: "Queens of the Stone Age", fundacion: 1997, activa: true },
-  { id: 3, nombre: "Pearl Jam", fundacion: 1990, activa: true },
+  { id: 4, nombre: "Queens of the Stone Age", fundacion: 1997, activa: true },
+  { id: 5, nombre: "Pearl Jam", fundacion: 1990, activa: true },
 ];
 
+const banda = () => {
+  for (let banda of bandas) {
+    if (banda.activa === true) {
+      console.log(
+        `La banda ${banda.nombre} está activa desde el año ${banda.fundacion}`
+      );
+    } else {
+      console.log(`La banda ${banda.nombre} ya no esta activa`);
+    }
+  }
+};
+banda();
 ///// RESULTADO
 // Nirvana no está activa
 // Foo Fighters está activa desde el año 1994
 // Led Zeppelin no está activa
 // Queens of the Stone Age está activa desde el año 1997
 // Pearl Jam está activa desde el año 1990
-12 - banda
+
+
+
+
+/*12 - banda
 Tenemos un objeto en la variable banda, con datos de una banda (nombre, año de lanzamiento, si sigue en actividad, una foto, los integrantes y una lista de sus discos).
 Queremos mostrar:
 La duración total del disco (suma de la duración de cada canción)
-La duración promedio por canción (un promedio entre todas las duraciones)
+La duración promedio por canción (un promedio entre todas las duraciones)*/
+
 var banda = {
   name: "Led Zeppelin",
   year: 1968,
@@ -452,8 +467,8 @@ console.log("Tiene " + cantidadMiembros + " miembros: " + miembros);
 console.log("Tiene en total " + cantidadDiscos + " discos");
 console.log(
   "Tiene en total " +
-    cantidadTotalCanciones +
-    " canciones entre todos los discos."
+  cantidadTotalCanciones +
+  " canciones entre todos los discos."
 );
 console.log("En promedio, cada canción dura " + promedioDuracion + " segundos");
 // ESPERADO
@@ -574,7 +589,7 @@ holaMundo.mostrarMensaje(); // ¡Hola mundo!
 console.log(holaMundo.obtenerMensaje()); // ¡Alo mundo!
 Objetos 002
 Tenemos una variable pelicula, con propiedades que guardan información sobre una película
-Necesitamos agregar un método/función mostrarInfo que muestre por consola el mensaje: "Película: [NOMBRE PELI] - Año: [AÑO PELI]"
+Necesitamos agregar un método / función mostrarInfo que muestre por consola el mensaje: "Película: [NOMBRE PELI] - Año: [AÑO PELI]"
 const pelicula = {
   titulo: "The Dark Knight",
   anio: 2008,
@@ -587,7 +602,7 @@ Objetos 003
 Tenemos una variable playlist, con información sobre una playlist de spotify
 El objeto tiene una propiedad songs que es un array vacío
 Al objeto vamos a agregarle un método que se llame addSong
-Este método va a recibir un string como parámetro (el nombre de una canción) y va a agregarlo en la propiedad songs del objeto.
+Este método va a recibir un string como parámetro(el nombre de una canción) y va a agregarlo en la propiedad songs del objeto.
 Después de crear la función, agregá las siguientes 3 canciones utilizando playlist.addSong: 'Geronimo', 'Sissy That Walk', 'Cover Girl'
 // TODO: agregar en el objeto el método addSong, que recibe como parámetro el nombre de una canción a agregar en el array songs
 const playlist = {
@@ -604,7 +619,7 @@ const playlist = {
 
 console.log(playlist.songs); // [ 'Geronimo', 'Sissy That Walk', 'Cover Girl' ]
 Objetos 004
-Tenemos una variable user, con información sobre una persona (firstName, lastName, age)
+Tenemos una variable user, con información sobre una persona(firstName, lastName, age)
 Al objeto vamos a agregarle un método que se llame getFullname, que no tiene parámetros y tiene que retornar un string con el firstName y lastName concatenadas, separados por un espacio.
 // TODO: agregar en el objeto el método getFullname, que tiene que retornar el nombre completo de la persona
 const user = {
@@ -629,8 +644,8 @@ var user = {
 console.log(user.getFullname()); // Hedy Lamarr
 Objetos 006 - carrito parte 1
 Tenemos un objeto shoppingCart, que guarda datos de un carrito de compras en una tienda virtual
-Tiene dos propiedades: owner (un objeto con los datos de la persona que está haciendo la compra) y products (un array de objetos, con todos los productos que está por comprar)
-Los objetos de los productos tienen 4 propiedades: id (un número), title (string, el nombre del producto), price (un número, el precio del producto) y freeShipping (un booleano que indica si el producto tiene o no cargos por envio)
+Tiene dos propiedades: owner(un objeto con los datos de la persona que está haciendo la compra) y products(un array de objetos, con todos los productos que está por comprar)
+Los objetos de los productos tienen 4 propiedades: id(un número), title(string, el nombre del producto), price(un número, el precio del producto) y freeShipping(un booleano que indica si el producto tiene o no cargos por envio)
 Agregar al objeto shoppingCart un método addProduct que nos permita agregar objetos de productos al array products.
 También necesitamos agregar un método getTotal que sume el precio de todos los productos que tenemos en el array products y nos devuelva el precio final total.
 Crear los siguientes productos y agregarlos al carrito:
@@ -681,12 +696,12 @@ shoppingCart.addProduct(unMouse);
 // shoppingCart.addProduct();
 
 console.log(shoppingCart.getTotal()); // 1306.49
-**Objetos 007 - carrito parte 2 **
-Copiar y pegar el código de la solución al ejercicio anterior
+** Objetos 007 - carrito parte 2 **
+  Copiar y pegar el código de la solución al ejercicio anterior
 Debido a un cambio de requerimiento, el precio final total se calcula distinto
-Si un producto no tiene free shipping (freeShipping es false) entonces al precio del producto hay que sumarle 120
-Si tiene free shipping (freeShipping es true) entonces se toma el precio que está en el objeto y no se le suma nada
-Una vez calculado el total, hay que agregar un 21% de IVA
+Si un producto no tiene free shipping(freeShipping es false) entonces al precio del producto hay que sumarle 120
+Si tiene free shipping(freeShipping es true) entonces se toma el precio que está en el objeto y no se le suma nada
+Una vez calculado el total, hay que agregar un 21 % de IVA
 console.log(shoppingCart.getTotal()); // 1871.2529
 Objetos 008 - carrito parte 3
 Crear un documento con el nombre obj_031.js
